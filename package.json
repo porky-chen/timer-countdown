@@ -1,5 +1,5 @@
 {
-  "name": "timer-countdown_mini",
+  "name": "timer-countdown-mini",
   "version": "1.0.2",
   "description": "A JavaScript SDK providing both timer and countdown capabilities. Designed for use in web applications that need precise timing functionalities, with easy-to-use methods for starting, pausing, and resetting timers or countdowns.",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/porky-chen/timer-countdown.git"
+    "url": "https://github.com/porky-chen/timer-countdown-mini.git"
   },
   "keywords": [
     "Timer",
