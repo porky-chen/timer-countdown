@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer and Countdown Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .container { margin: 20px; }
+    .section { margin-bottom: 40px; }
+    .display { font-size: 2em; margin-top: 10px; }
+    button { margin-right: 5px; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Timer Section -->
+  <div class="section">
+    <h2>Timer</h2>
+    <div id="timerDisplay" class="display">0.0 s</div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="resumeTimer()">Resume</button>
+    <button onclick="resetTimer()">Reset</button>
+  </div>
+
+  <!-- Countdown Section -->
+  <div class="section">
+    <h2>Countdown (1 Minute)</h2>
+    <div id="countdownDisplay" class="display">60 s</div>
+    <button onclick="startCountdown()">Start</button>
+    <button onclick="pauseCountdown()">Pause</button>
+    <button onclick="resumeCountdown()">Resume</button>
+    <button onclick="cancelCountdown()">Cancel</button>
+  </div>
+</div>
+
+<script src="./dist/bundle.js"></script>
+<script type="module">
+  const {TimerSDK: td} = TimerSDK
+  // Timer variables
+  let timer = td.createTimer();
+  let timerInterval;
+  function startTimer() {
+    timer.start();
+    updateTimerDisplay();
+    timerInterval = setInterval(updateTimerDisplay, 100);
+  }
+
+  function pauseTimer() {
+    timer.pause();
+    clearInterval(timerInterval);
+  }
+
+  function resumeTimer() {
+    timer.resume();
+    timerInterval = setInterval(updateTimerDisplay, 100);
+  }
+
+  function stopTimer() {
+    timer.stop();
+    clearInterval(timerInterval);
+    updateTimerDisplay();
+  }
+
+  function resetTimer() {
+    timer.reset();
+    clearInterval(timerInterval);
+    document.getElementById('timerDisplay').innerText = '0.0 s';
+  }
+
+  function updateTimerDisplay() {
+    const duration = timer.getElapsedDurationInSeconds() || 0;
+    document.getElementById('timerDisplay').innerText = `${duration.toFixed(1)} s`;
+  }
+
+  // Countdown variables
+  let countdown;
+  let countdownInterval;
+
+  function startCountdown() {
+    countdown = td.createCountdown(0, 1, 0, () => {
+      clearInterval(countdownInterval);
+      alert('Countdown ended!');
+    });
+    countdown.start();
+    updateCountdownDisplay();
+    countdownInterval = setInterval(updateCountdownDisplay, 100);
+  }
+
+  function pauseCountdown() {
+    countdown.pause();
+    clearInterval(countdownInterval);
+  }
+
+  function resumeCountdown() {
+    countdown.resume();
+    countdownInterval = setInterval(updateCountdownDisplay, 100);
+  }
+
+  function cancelCountdown() {
+    countdown.cancel();
+    clearInterval(countdownInterval);
+    document.getElementById('countdownDisplay').innerText = '60 s';
+  }
+
+  function updateCountdownDisplay() {
+    const remainingTime = countdown.getRemainingTime() || 0;
+    document.getElementById('countdownDisplay').innerText = `${remainingTime.toFixed(1)} s`;
+  }
+
+   // Expose functions to global scope
+   window.startTimer = startTimer;
+  window.pauseTimer = pauseTimer;
+  window.resumeTimer = resumeTimer;
+  window.stopTimer = stopTimer;
+  window.resetTimer = resetTimer;
+
+  window.startCountdown = startCountdown;
+  window.pauseCountdown = pauseCountdown;
+  window.resumeCountdown = resumeCountdown;
+  window.cancelCountdown = cancelCountdown;
+</script>
+
+</body>
+</html>
