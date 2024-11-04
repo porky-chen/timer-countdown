@@ -1,6 +1,6 @@
 {
-  "name": "timer-countdown",
-  "version": "1.0.1",
+  "name": "timer-countdown_mini",
+  "version": "1.0.2",
   "description": "A JavaScript SDK providing both timer and countdown capabilities. Designed for use in web applications that need precise timing functionalities, with easy-to-use methods for starting, pausing, and resetting timers or countdowns.",
   "main": "index.js",
   "scripts": {
@@ -40,6 +40,7 @@
     "dist"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public" 
   }
 }
