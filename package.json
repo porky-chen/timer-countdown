@@ -8,6 +8,10 @@
     "build": "webpack",
     "start": "webpack serve --open"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/porky-chen/timer-countdown.git"
+  },
   "keywords": [
     "Timer",
     "Countdown", 
@@ -20,8 +24,6 @@
     "JavaScript Timing", 
     "Web Development"
   ],
-  "author": "Zeo",
-  "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "jest": "^29.7.0",
@@ -31,5 +33,13 @@
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"
+  },
+  "author": "Zeo",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
