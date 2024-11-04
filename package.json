@@ -38,10 +38,8 @@
   "license": "ISC",
   "files": [
     "dist",
-    "README.npm.md",
-    "package.json"
+    "README.npm.md"
   ],
-  "readme": "README.npm.md",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public" 
