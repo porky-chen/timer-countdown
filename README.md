@@ -1,6 +1,10 @@
 # Timer-Countdown SDK
 
-`Timer-Countdown SDK` 是一个用于提供计时器和倒计时功能的 JavaScript SDK。支持暂停、恢复、重置等功能，可独立使用计时器或倒计时。
+`Timer-Countdown SDK` 是一个用于提供计时器和倒计时功能的 JavaScript SDK。支持暂停、恢复、重置等功能，可独立使用计时器或倒计时，适合需要时间管理的 Web 应用使用。
+
+**Description**: A JavaScript SDK providing both timer and countdown capabilities. Designed for use in web applications that need precise timing functionalities, with easy-to-use methods for starting, pausing, and resetting timers or countdowns.
+
+**Keywords**: Timer, Countdown, JavaScript SDK, Time Management, Timer SDK, Countdown Timer, Pause, Resume, Reset, JavaScript Timing, Web Development
 
 ## 功能
 

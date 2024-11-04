@@ -1,15 +1,26 @@
 {
   "name": "timer-countdown",
   "version": "1.0.0",
-  "description": "",
+  "description": "A JavaScript SDK providing both timer and countdown capabilities. Designed for use in web applications that need precise timing functionalities, with easy-to-use methods for starting, pausing, and resetting timers or countdowns.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "build": "webpack",
     "start": "webpack serve --open"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Timer",
+    "Countdown", 
+    "JavaScript SDK", 
+    "Time Management", 
+    "Timer SDK", 
+    "Countdown Timer", 
+    "Pause", "Resume", 
+    "Reset", 
+    "JavaScript Timing", 
+    "Web Development"
+  ],
+  "author": "Zeo",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.5.14",
