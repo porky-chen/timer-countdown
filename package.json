@@ -1,8 +1,8 @@
 {
   "name": "timer-countdown-mini",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "A JavaScript SDK providing both timer and countdown capabilities. Designed for use in web applications that need precise timing functionalities, with easy-to-use methods for starting, pausing, and resetting timers or countdowns.",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "test": "jest",
     "build": "webpack",
@@ -37,8 +37,10 @@
   "author": "Zeo",
   "license": "ISC",
   "files": [
-    "dist"
+    "dist",
+    "README.npm.md"
   ],
+  "readme": "README.npm.md",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public" 
