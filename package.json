@@ -38,7 +38,8 @@
   "license": "ISC",
   "files": [
     "dist",
-    "README.npm.md"
+    "README.npm.md",
+    "package.json"
   ],
   "readme": "README.npm.md",
   "publishConfig": {
