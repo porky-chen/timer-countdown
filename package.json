@@ -9,6 +9,8 @@
   ],
   "readme": "README.npm.md",
   "scripts": {
+    "prepack": "mv README.npm.md README.md",
+    "postpack": "mv README.md README.npm.md",
     "test": "jest",
     "build": "webpack",
     "start": "webpack serve --open"
